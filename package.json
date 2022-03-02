@@ -1,0 +1,31 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node index.ts",
+    "start": "ts-node src/index.ts",
+    "lint": "eslint './**/*.ts'",
+    "lint:fix": "eslint --fix ./",
+    "clean": "rm -rf ./out",
+    "copy:files": "mkdir out/static/ && cp static/words.txt out/static/",
+    "build": "npm run clean && tsc && npm run copy:files"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "ts-node": "^10.5.0",
+    "tsc-watch": "^4.6.0",
+    "tsconfig-paths": "^3.12.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  }
+}
