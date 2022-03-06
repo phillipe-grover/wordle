@@ -3,7 +3,7 @@ const readline = require('readline');
 const path = require('path');
 
 const initWordsList = async (): Promise<[string?]> => {
-  const fileStream = fs.createReadStream(path.resolve(__dirname, '../static/words.txt'));
+  const fileStream = fs.createReadStream(path.resolve(__dirname, '../../static/words.txt'));
 
   const rl = readline.createInterface({
     input: fileStream,

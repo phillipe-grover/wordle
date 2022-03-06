@@ -1,5 +1,5 @@
-import { LetterNode } from './letter-node';
-import { letters } from './letters-constants';
+import { LetterNode } from './Letter';
+import { letterConstants } from './constants';
 import { initWordsList } from './words.initializer';
 
 const findLetterByWordPrefix = (prefix: string, words: [string?]) =>
@@ -8,7 +8,7 @@ const findLetterByWordPrefix = (prefix: string, words: [string?]) =>
 const buildLetterNode = (words: [string?], index: number, letter: string , prefix: string): LetterNode => {
   const node = new LetterNode(index, letter);
 
-  letters.forEach((nextLetter) => {
+  letterConstants.forEach((nextLetter) => {
     const newPrefix =  `${prefix}${nextLetter}`;
     const isValidLetter = findLetterByWordPrefix(newPrefix, words);
 
@@ -25,7 +25,7 @@ const buildLettersNodes = async () : Promise<[LetterNode?]>  => {
   const words = await initWordsList();
 
   const lettersNodes: [LetterNode?] = [];
-  letters.forEach((letter) => {
+  letterConstants.forEach((letter) => {
     lettersNodes.push(buildLetterNode(words, 1, letter, letter));
   });
 
