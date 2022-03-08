@@ -1,5 +1,5 @@
 import { buildLettersNodes } from './nodes/builder';
-import { buildRequirements } from './requirements/builder'
+import { buildRequirements } from './requirements/builder';
 import { findMatches } from './matcher';
 import { sort } from './sorting';
 

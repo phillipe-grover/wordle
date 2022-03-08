@@ -7,17 +7,17 @@ const initWordsList = async (): Promise<[string?]> => {
 
   const rl = readline.createInterface({
     input: fileStream,
-    crlfDelay: Infinity
+    crlfDelay: Infinity,
   });
 
   const words: [string?] = [];
 
   for await (const line of rl) {
     const upperLine = line.toUpperCase();
-    words.push(upperLine)
+    words.push(upperLine);
   }
 
-  return Promise.resolve(words);
+  return await Promise.resolve(words);
 };
 
 export { initWordsList };

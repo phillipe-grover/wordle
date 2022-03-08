@@ -8,6 +8,7 @@ export interface IPositionRequirement {
 
 export class PositionRequirement implements IPositionRequirement {
   exactMatch: string = null;
+
   lettersToIgnore: string[] = [];
 
   constructor(exactMatch: string, wrongLetters: string[]) {
@@ -23,5 +24,5 @@ export class PositionRequirement implements IPositionRequirement {
     }
 
     return this.lettersToIgnore.includes(letter)  === false;
-  }
+  };
 }

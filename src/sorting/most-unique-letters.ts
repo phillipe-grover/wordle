@@ -19,5 +19,5 @@ export const sortByMostUniqueLetters = (a, b) => {
   const countB = countNumberOfUniqueLetters(b);
 
   return countB - countA;
-} 
+}; 
 

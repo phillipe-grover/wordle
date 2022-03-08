@@ -1,5 +1,5 @@
-import { IPositionRequirement, PositionRequirement } from "./Position";
-import { IWordRequirements, WordRequirements } from "./Requirement";
+import { IPositionRequirement, PositionRequirement } from './Position';
+import { IWordRequirements, WordRequirements } from './Requirement';
 
 export const buildRequirements = (): IWordRequirements => {
   const positionRequirements: IPositionRequirement[] = [];
@@ -16,8 +16,8 @@ export const buildRequirements = (): IWordRequirements => {
   const wordRequirements = new WordRequirements(
     lettersThatMustBePresent,
     lettersToIgnore,
-    positionRequirements
+    positionRequirements,
   );
 
   return wordRequirements;
-}
+};
