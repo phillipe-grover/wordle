@@ -1,13 +1,4 @@
-import { IPositionRequirement } from './Position';
-
-export interface IWordRequirements {
-  lettersThatMustBePresent: string[];
-  lettersToIgnore: string[];
-  positionsRequirements: IPositionRequirement[];
-
-  validate: (word: string) => boolean;
-  getConditionForPosition: (index: number) => IPositionRequirement;
-}
+import { IPositionRequirement, IWordRequirements } from '@/types';
 
 export class WordRequirements implements IWordRequirements {
   lettersThatMustBePresent: string[];

@@ -1,5 +1,5 @@
+import { IWordRequirements } from '@/types';
 import { LetterNode } from '../nodes/Letter';
-import { IWordRequirements } from '../requirements/Requirement';
 
 const findMatches = (
   matches: [string?],

@@ -1,5 +1,6 @@
-import { IPositionRequirement, PositionRequirement } from './Position';
-import { IWordRequirements, WordRequirements } from './Requirement';
+import { IPositionRequirement, IWordRequirements } from '@/types';
+import { PositionRequirement } from './Position';
+import { WordRequirements } from './Requirement';
 
 export const buildRequirements = (): IWordRequirements => {
   const positionRequirements: IPositionRequirement[] = [];
