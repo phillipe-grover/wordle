@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --collect-coverage",
     "start": "ts-node src/index.ts",
     "lint": "eslint './**/*.ts'",
