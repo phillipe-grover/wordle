@@ -4,8 +4,9 @@
   "description": "Helps you play Wordle",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collect-coverage",
-    "start:dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "start": "ts-node src/index.ts",
     "lint": "eslint './**/*.ts'",
     "lint:fix": "eslint --fix ./",
     "clean": "rm -rf ./out",
@@ -19,7 +20,8 @@
   "author": "Phillipe Moreira",
   "pre-commit": [
     "precommit-msg",
-    "lint"
+    "lint",
+    "test"
   ],
   "license": "MIT",
   "devDependencies": {
