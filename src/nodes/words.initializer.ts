@@ -1,23 +1,23 @@
-const fs = require('fs');
-const readline = require('readline');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
+import * as readline from 'readline';
 
 const initWordsList = async (): Promise<[string?]> => {
-  const fileStream = fs.createReadStream(path.resolve(__dirname, '../../static/words.txt'));
+  const fileStream = fs.createReadStream(path.resolve(__dirname, '../../static/pt-br.txt'));
 
   const rl = readline.createInterface({
     input: fileStream,
-    crlfDelay: Infinity
+    crlfDelay: Infinity,
   });
 
   const words: [string?] = [];
 
   for await (const line of rl) {
     const upperLine = line.toUpperCase();
-    words.push(upperLine)
+    words.push(upperLine);
   }
 
-  return Promise.resolve(words);
+  return await Promise.resolve(words);
 };
 
 export { initWordsList };

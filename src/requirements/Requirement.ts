@@ -1,23 +1,16 @@
-import { IPositionRequirement } from "./Position";
-
-export interface IWordRequirements {
-  lettersThatMustBePresent: string[];
-  lettersToIgnore: string[];
-  positionsRequirements: IPositionRequirement[];
-
-  validate: (word: string) => boolean;
-  getConditionForPosition: (index: number) => IPositionRequirement;
-}
+import { IPositionRequirement, IWordRequirements } from '@/types';
 
 export class WordRequirements implements IWordRequirements {
   lettersThatMustBePresent: string[];
+
   lettersToIgnore: string[];
+
   positionsRequirements: IPositionRequirement[];
 
   constructor(
     lettersThatMustBePresent: string[],
     lettersToIgnore: string[],
-    positionsRequirements: IPositionRequirement[]
+    positionsRequirements: IPositionRequirement[],
   ) {
     this.lettersThatMustBePresent = lettersThatMustBePresent;
     this.lettersToIgnore = lettersToIgnore;
@@ -55,7 +48,7 @@ export class WordRequirements implements IWordRequirements {
     }
 
     return true;
-  }
+  };
 
   public getConditionForPosition = (index: number): IPositionRequirement =>
     this.positionsRequirements[index];

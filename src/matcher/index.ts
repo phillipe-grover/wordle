@@ -1,12 +1,12 @@
+import { IWordRequirements } from '@/types';
 import { LetterNode } from '../nodes/Letter';
-import { IWordRequirements } from '../requirements/Requirement';
 
 const findMatches = (
   matches: [string?],
   requirements: IWordRequirements,
   node: LetterNode,
   matchLength: number,
-  sequence: string
+  sequence: string,
 ) => {
   if (matchLength === 5) {
     if (requirements.validate(sequence)) {
@@ -22,8 +22,8 @@ const findMatches = (
 
   // There might be valid matches up ahead, it should keep looking.
   node.nextLetters.forEach((nextLetterNode) => {
-    const nextSequence = `${sequence}${nextLetterNode.letter}`
-    findMatches(matches, requirements, nextLetterNode, matchLength + 1, nextSequence)
+    const nextSequence = `${sequence}${nextLetterNode.letter}`;
+    findMatches(matches, requirements, nextLetterNode, matchLength + 1, nextSequence);
   });
 };
 

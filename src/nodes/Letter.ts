@@ -6,7 +6,9 @@ interface ILetterNode {
 
 class LetterNode implements ILetterNode {
   index: number = null;
+
   letter: string = null;
+
   nextLetters: [LetterNode?];
 
   constructor(index: number, letter: string) {
@@ -16,4 +18,4 @@ class LetterNode implements ILetterNode {
   }
 }
 
-export { ILetterNode, LetterNode};
+export { ILetterNode, LetterNode };

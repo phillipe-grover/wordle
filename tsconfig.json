@@ -4,5 +4,12 @@
     "module": "commonjs",
     "outDir": "out",
     "sourceMap": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
+  "include": [
+    "./src/**/*",
+    "jest.config.js",
+  ],
 }
