@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 export interface IPositionRequirement {
   exactMatch: string;
   lettersToIgnore: string[];

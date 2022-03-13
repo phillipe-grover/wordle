@@ -1,6 +1,6 @@
-const fs = require('fs');
-const readline = require('readline');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
+import * as readline from 'readline';
 
 const initWordsList = async (): Promise<[string?]> => {
   const fileStream = fs.createReadStream(path.resolve(__dirname, '../../static/pt-br.txt'));
