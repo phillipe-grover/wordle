@@ -36,7 +36,7 @@ And it will order the list of results by the number of different letters present
 
 #### Changing word requirements
 
-*FOR NOW*: go to the [requirements builder](src/requirements/builder.ts) and change the hardcoded values, the next step is to setup a web server and expose an endpoint that expects the requirements in a json format.
+Go to the [requirements builder](src/requirements/builder.ts) and change the hardcoded values, the next step is to setup a web server and expose an endpoint that expects the requirements in a json format.
 
 ## How it works
 
@@ -51,9 +51,3 @@ It follows the steps:
 ### The tree
 
 ![tree](images/tree.png)
-
-## Next steps
-
-- [ ] Setup a web server and expose an endpoint that accepts a JSON with requirements and calculates the suggestion list - [issue](https://github.com/phillipe-moreira/wordle/issues/2).
-- [ ] Implement more clever ways to sort the result - [issue](https://github.com/phillipe-moreira/wordle/issues/9).
-- [ ] Optimize the algorithm.
